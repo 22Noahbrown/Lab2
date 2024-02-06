@@ -1,0 +1,178 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Specifying Color with RGBa, HSLa, Hexadecimal, and CSS Filters</title>
+	<link href="css/normalize.css" rel="stylesheet">
+	<link href="css/base.css" rel="stylesheet">
+	<style>
+/* STEP 1: Using the color picker utility at
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Colors/Color_picker_tool,
+set each color in hexadecimal format
+to match as closely as you can with the colors
+on the FIRST paint swatch card provided.
+-------------------------------------------------- */
+	#hex div:nth-of-type(1) {
+		background-color: #e66658;
+	}
+	#hex div:nth-of-type(2) {
+		background-color: #f3afa7;
+	}
+	#hex div:nth-of-type(3) {
+		background-color: #a43629;
+	}
+	#hex div:nth-of-type(4) {
+		background-color: #5d170f;
+	}
+/* STEP 2: Set each color in rgba format
+to match as closely as you can with the colors
+on the SECOND paint swatch card provided.
+-------------------------------------------------- */
+	#rgba div:nth-of-type(1) {
+		background-color: Rgba(74, 37, 0, 1);
+	}
+	#rgba div:nth-of-type(2) {
+		background-color: Rgba(117, 59, 2, 1);
+	}
+	#rgba div:nth-of-type(3) {
+		background-color: Rgba(175, 92, 8, 1);
+	}
+	#rgba div:nth-of-type(4) {
+		background-color: Rgba(222, 134, 3, 1);
+	}
+	#rgba div:nth-of-type(5) {
+		background-color: Rgba(240, 139, 24, 1);
+	}
+	#rgba div:nth-of-type(6) {
+		background-color: Rgba(255, 172, 28, 1);
+	}
+	/* ...and so on... */
+
+/* STEP 3: Set each color in hsla format
+to match as closely as you can with the colors
+on the THIRD paint swatch card provided.
+-------------------------------------------------- */
+	#hsla div:nth-of-type(1) {
+		background-color: hsla(52deg, 100%, 49%, 1);
+	}
+	#hsla div:nth-of-type(2) {
+		background-color: hsla(52deg, 100%, 76%, 1);
+	}
+	#hsla div:nth-of-type(3) {
+		background-color: hsla(52deg, 95%, 64%, 1);
+	}
+	#hsla div:nth-of-type(4) {
+		background-color: hsla(52deg, 99%, 50%, 1);
+	}
+	/* ...and so on... */
+
+	/* STEP 4: Set each color using a CSS color keywords
+(https://developer.mozilla.org/en-US/docs/Web/CSS/color_value)
+that matches each color as closely as possible, then
+apply one or more CSS filters to see if you can
+produce an exact rendition of the swatch colors on the FOURTH card provided.
+(https://developer.mozilla.org/en-US/docs/Web/CSS/filter).
+-------------------------------------------------- */
+	#keyword div:nth-of-type(1) {
+		background-color: darkolivegreen ;
+		filter: saturate(70%);
+	}
+	#keyword div:nth-of-type(3) {
+		background-color: darkseagreen ;
+		filter: brightness(150%);
+		filter: saturate(70%);
+	}
+	#keyword div:nth-of-type(2) {
+		background-color: palegoldenrod ;
+		filter: hue-rotate(30deg);
+	}
+	#keyword div:nth-of-type(4) {
+		background-color: darkolivegreen ;
+		filter: brightness(120%);
+	}
+	/* ...and so on... */
+  		/* Make the Background all white so the brightness is always the same. user sets their whitepoint to match the one we use. have a message asking the user to turn up brightness of device screen for it to be easy to compare.*/
+	/* STEP 5: Describe one or more things that you can do to ensure that the colour rendering on your screen is exactly the same (or as close as possible) to the colours on your paint chip cards. If possible, attempt to do one or more of these things and describe what you did and what you found out. Maybe a screenshot, too if it might help. */
+</style>
+</head>
+
+<body>
+	<header>
+		<h1>Specifying Color <em>with</em> <abbr title="Red, Green, Blue, Alpha">RGBa</abbr>, <abbr title="Hue, Saturation, Luminousity, Alpha">HSLa</abbr>, Hexadecimal, <em>and</em> CSS Filters</h1>
+	</header>
+	<main>
+		<section id="hex">
+			<h2>Hexadecimal</h2>
+			<div>
+				<h3>Pink-A-Licious</h3>
+			</div>
+			<div>
+				<h3>Diner Pink</h3>
+			</div>
+			<div>
+				<h3>Granite Pink</h3>
+			</div>
+			<div>
+				<h3>Rum Raisin</h3>
+			</div>
+			
+		</section>
+		<section id="rgba">
+			<h2>RGB(A)</h2>
+			<div>
+				<h3>Cigar</h3>
+			</div>
+			<div>
+				<h3>Spice Island</h3>
+			</div>
+			<div>
+				<h3>Butterscotch Tempest</h3>
+			</div>
+			<div>
+				<h3>Sun God</h3>
+			</div>
+			<div>
+				<h3>Harvest Flame</h3>
+			</div>
+			<div>
+				<h3>Gold Sunset</h3>
+			</div>
+		</section>
+		<section id="hsla">
+			<h2>HSL(A)</h2>
+			<div>
+				<h3>Pure Yellow</h3>
+			</div>
+			<div>
+				<h3>Lemon Spritz</h3>
+			</div>
+			<div>
+				<h3>Yellow Diamond</h3>
+			</div>
+			<div>
+				<h3>Royal Flower</h3>
+			</div>
+		
+		</section>
+		<section id="keyword">
+			<h2>Keyword / CSS Filter</h2>
+			<div>
+				<h3>Community Garden</h3>
+			</div>
+			<div>
+				<h3>Silver Sage</h3>
+			</div>
+			<div>
+				<h3>Rosemary</h3>
+			</div>
+			<div>
+				<h3>Tarragon</h3>
+			</div>
+	
+		</section>
+	</main>
+	<footer>
+		<p><small>Colors based on CIL color paint swatch cards</small></p>
+	</footer>
+</body>
+</html>
